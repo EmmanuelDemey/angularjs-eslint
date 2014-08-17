@@ -1,0 +1,19 @@
+{
+  "name": "angularjs-eslint",
+  "version": "0.0.2",
+  "description": "ESLint rules for AngularJS projects",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Gillespie59/angularjs-eslint.git"
+  },
+  "author": "Emmanuel DEMEY",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Gillespie59/angularjs-eslint/issues"
+  },
+  "homepage": "https://github.com/Gillespie59/angularjs-eslint"
+}
