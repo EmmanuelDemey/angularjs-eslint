@@ -3,15 +3,14 @@ module.exports = function(context) {
     "use strict";
 
     function recordError(node, origin){
-    	if(node.type === "Literal" && node.value === "[object Object]") {
-    		context.report(origin, "You should use the angular.isObject method", {});
-    	}
+        if(node.type === "Literal" && node.value === "[object Object]") {
+            context.report(origin, "You should use the angular.isObject method", {});
+        }
     }
 
     return {
-        
         "BinaryExpression": function(node) {
-        	
+
             if(node.operator === "===" || node.operator === "!=="){
                 if(node.left.type === "UnaryExpression" && node.left.operator === "typeof"){
                     recordError(node.right, node);
@@ -20,12 +19,10 @@ module.exports = function(context) {
                     recordError(node.left, node);
                 }
                 else {
-                	recordError(node.right, node);
-                	recordError(node.left, node);
+                    recordError(node.right, node);
+                    recordError(node.left, node);
                 }
             }
-
         }
     };
-
 };

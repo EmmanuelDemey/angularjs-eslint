@@ -6,7 +6,6 @@ module.exports = function(context) {
     *  Rule that check if we use angular.is(Un)defined() instead of the undefined keyword
     */
     return {
-        
         "BinaryExpression": function(node) {
 
             if(node.operator === "===" || node.operator === "!=="){
