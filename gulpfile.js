@@ -12,9 +12,9 @@
 					'quotes': [2, 'single']
 				},
 				globals: {
-					'require':false,
-					'module':false,
-					'console':false,
+					'require': false,
+					'module': false,
+					'console': false,
 					'process': true
 				}
 			}))
