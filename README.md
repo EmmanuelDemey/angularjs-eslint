@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/Gillespie59/angularjs-eslint.svg?branch=master)](https://travis-ci.org/Gillespie59/angularjs-eslint)
+[![Npm dependencies](https://david-dm.org/Gillespie59/angularjs-eslint.svg)](https://david-dm.org/Gillespie59/angularjs-eslint)
 
 This repository will give access to new rules for the ESLint tool. You should use it only if you are developping an AngularJS application. 
 
