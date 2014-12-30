@@ -4,16 +4,16 @@
  */
 /*global cat, cd, cp, echo, exec, exit, find, mkdir, mv, pwd, rm, target, test*/
 
-"use strict";
+'use strict';
 
 //------------------------------------------------------------------------------
 // Requirements
 //------------------------------------------------------------------------------
 
-require("shelljs/make");
+require('shelljs/make');
 
-var path = require("path"),
-    nodeCLI = require("shelljs-nodecli");
+var path = require('path'),
+    nodeCLI = require('shelljs-nodecli');
 //------------------------------------------------------------------------------
 // Settings
 //------------------------------------------------------------------------------
@@ -22,15 +22,15 @@ var path = require("path"),
 // Data
 //------------------------------------------------------------------------------
 
-var NODE = "node ", // intentional extra space
-    NODE_MODULES = "./node_modules/",
+var NODE = 'node ', // intentional extra space
+    NODE_MODULES = './node_modules/',
 
     // Utilities - intentional extra space at the end of each string
-    MOCHA = NODE_MODULES + "mocha/bin/_mocha ",
-    ESLINT = NODE + " bin/eslint.js ",
+    MOCHA = NODE_MODULES + 'mocha/bin/_mocha ',
+    ESLINT = NODE + ' bin/eslint.js ',
 
     // Files
-    TEST_FILES = find("test/").filter(fileType("js")).join(" ");
+    TEST_FILES = find('test/').filter(fileType('js')).join(' ');
 
 //------------------------------------------------------------------------------
 // Helpers
@@ -44,7 +44,7 @@ var NODE = "node ", // intentional extra space
  */
 function fileType(extension) {
     return function(filename) {
-        return filename.substring(filename.lastIndexOf(".") + 1) === extension;
+        return filename.substring(filename.lastIndexOf('.') + 1) === extension;
     };
 }
 
@@ -54,13 +54,13 @@ target.test = function() {
         lastReturn;
 
     // exec(ISTANBUL + " cover " + MOCHA + "-- -c " + TEST_FILES);
-    lastReturn = nodeCLI.exec("istanbul", "cover", MOCHA, "-- -c", TEST_FILES);
+    lastReturn = nodeCLI.exec('istanbul', 'cover', MOCHA, '-- -c', TEST_FILES);
     if (lastReturn.code !== 0) {
       errors++;
     }
 
     // exec(ISTANBUL + "check-coverage --statement 99 --branch 98 --function 99 --lines 99");
-    lastReturn = nodeCLI.exec("istanbul", "check-coverage", "--statement 99 --branch 98 --function 99 --lines 99");
+    lastReturn = nodeCLI.exec('istanbul', 'check-coverage', '--statement 99 --branch 98 --function 99 --lines 99');
     if (lastReturn.code !== 0) {
       errors++;
     }

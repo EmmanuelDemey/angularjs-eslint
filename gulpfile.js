@@ -1,22 +1,23 @@
 (function () {
-   "use strict";
-   var gulp = require("gulp"),
-		eslint = require("gulp-eslint");
+   'use strict';
+   var gulp = require('gulp'),
+		eslint = require('gulp-eslint');
 
-	gulp.task("default", function() {
+	gulp.task('default', function() {
 
-		gulp.src(["rules/*.js"])
+		gulp.src(['rules/*.js'])
 			.pipe(eslint({
 				rules:{
-					"no-console": 0
+					'no-console': 0,
+					'quotes': [2,'single']
 				},
 				globals: {
-					"require":false,
-					"module":false,
-					"console":false,
-					"process": true
+					'require':false,
+					'module':false,
+					'console':false,
+					'process': true
 				}
 			}))
-			.pipe(eslint.formatEach("compact", process.stderr));
+			.pipe(eslint.formatEach('compact', process.stderr));
 	});
 }());

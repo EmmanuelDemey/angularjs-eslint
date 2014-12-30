@@ -1,22 +1,22 @@
 module.exports = function(context) {
 
-    "use strict";
+    'use strict';
 
     function recordError(node, origin){
-        if(node.type === "Literal" && node.value === "[object Date]") {
-            context.report(origin, "You should use the angular.isDate method", {});
+        if(node.type === 'Literal' && node.value === '[object Date]') {
+            context.report(origin, 'You should use the angular.isDate method', {});
         }
     }
 
     return {
 
-        "BinaryExpression": function(node) {
+        'BinaryExpression': function(node) {
 
-            if(node.operator === "===" || node.operator === "!=="){
-                if(node.left.type === "UnaryExpression" && node.left.operator === "typeof"){
+            if(node.operator === '===' || node.operator === '!=='){
+                if(node.left.type === 'UnaryExpression' && node.left.operator === 'typeof'){
                     recordError(node.right, node);
                 }
-                else if(node.right.type === "UnaryExpression" && node.right.operator === "typeof"){
+                else if(node.right.type === 'UnaryExpression' && node.right.operator === 'typeof'){
                     recordError(node.left, node);
                 }
                 else {
