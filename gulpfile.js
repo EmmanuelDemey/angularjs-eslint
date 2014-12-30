@@ -9,7 +9,7 @@
 			.pipe(eslint({
 				rules:{
 					'no-console': 0,
-					'quotes': [2,'single']
+					'quotes': [2, 'single']
 				},
 				globals: {
 					'require':false,
