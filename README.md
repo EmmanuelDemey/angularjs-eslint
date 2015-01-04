@@ -84,3 +84,13 @@ You should use the angular.isObject method instead of the default JavaScript imp
 ## ng_typecheck_string
 
 You should use the angular.isString method instead of the default JavaScript implementation (typeof "" === "[object String]").
+
+# Need your help
+It is an opensource project. Any help will be very useful. You can : 
+- Create issue
+- Send Pull Request
+- Write Documentation
+- Add new Features
+- Add new Rules
+- Improve the quality
+- Reply to issues
