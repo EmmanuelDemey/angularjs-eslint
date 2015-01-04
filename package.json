@@ -19,8 +19,10 @@
     "eslint-tester": "^0.3.0",
     "gulp": "~3.8.7",
     "gulp-eslint": "0.1.8",
+    "gulp-istanbul": "^0.5.0",
+    "gulp-mocha": "^2.0.0",
     "istanbul": "^0.3.2",
-    "mocha": "^1.21.5",
+    "mocha": "https://registry.npmjs.org/mocha/-/mocha-1.21.5.tgz",
     "shelljs": "^0.3.0",
     "shelljs-nodecli": "^0.1.1"
   },
