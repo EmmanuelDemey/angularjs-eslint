@@ -4,7 +4,7 @@ module.exports = function(context) {
 
     function report(node, method){
 
-        context.report(node, 'The "{{method}}"" call should be assigned to a variable, in order to be destroyed during the $destroy event', {
+        context.report(node, 'The "{{method}}" call should be assigned to a variable, in order to be destroyed during the $destroy event', {
             method: method
         });
     }
