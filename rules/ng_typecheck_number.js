@@ -7,19 +7,21 @@ module.exports = function(context) {
         }
     }
 
+    function checkNode(node){
+        return node.type === 'Identifier'
+            || (node.type === 'UnaryExpression'
+                && node.operator === 'typeof');
+    }
+
     return {
 
         'BinaryExpression': function(node) {
 
             if(node.operator === '===' || node.operator === '!=='){
-                if(node.left.type === 'UnaryExpression' && node.left.operator === 'typeof'){
+                if(checkNode(node.left)){
                     recordError(node.right, node);
                 }
-                else if(node.right.type === 'UnaryExpression' && node.right.operator === 'typeof'){
-                    recordError(node.left, node);
-                }
-                else {
-                    recordError(node.right, node);
+                else if(checkNode(node.right)){
                     recordError(node.left, node);
                 }
             }
