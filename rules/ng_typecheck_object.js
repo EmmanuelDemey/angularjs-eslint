@@ -3,7 +3,7 @@ module.exports = function(context) {
     'use strict';
 
     function recordError(node, origin){
-        if(node.type === 'Literal' && node.value === '[object Object]') {
+        if(node.type === 'Literal' && node.value === 'object') {
             context.report(origin, 'You should use the angular.isObject method', {});
         }
     }
@@ -14,11 +14,9 @@ module.exports = function(context) {
             if(node.operator === '===' || node.operator === '!=='){
                 if(node.left.type === 'UnaryExpression' && node.left.operator === 'typeof'){
                     recordError(node.right, node);
-                }
-                else if(node.right.type === 'UnaryExpression' && node.right.operator === 'typeof'){
+                } else if(node.right.type === 'UnaryExpression' && node.right.operator === 'typeof'){
                     recordError(node.left, node);
-                }
-                else {
+                } else {
                     recordError(node.right, node);
                     recordError(node.left, node);
                 }
