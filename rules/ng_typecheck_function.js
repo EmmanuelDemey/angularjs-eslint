@@ -3,7 +3,7 @@ module.exports = function(context) {
     'use strict';
 
     function recordError(node, origin){
-        if(node.type === 'Literal' && node.value === '[object Function]') {
+        if(node.type === 'Literal' && node.value === 'function') {
             context.report(origin, 'You should use the angular.isFunction method', {});
         }
     }
