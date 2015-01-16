@@ -20,8 +20,8 @@ This repository will give access to new rules for the ESLint tool. You should us
 | ng_typecheck_function | You should use the angular.isFunction method instead of the default JavaScript implementation (typeof function(){} ==="[object Function]").  |
 | ng_typecheck_number | You should use the angular.isNumber method instead of the default JavaScript implementation (typeof 3 === "[object Number]"). |
 | ng_typecheck_object | You should use the angular.isObject method instead of the default JavaScript implementation (typeof {} === "[object Object]").  |
-| ng_typecheck_regexp | You should use the angular.isRegexp method instead of the default JavaScript implementation (typeof "" === "[object String]"). |
-| ng_typecheck_string | You should use the angular.isString method instead of the default JavaScript implementation (toString.call(/^A/) === "[object RegExp]"). |
+| ng_typecheck_regexp | You should use the angular.isRegexp method instead of the default JavaScript implementation (toString.call(/^A/) === "[object RegExp]"). |
+| ng_typecheck_string | You should use the angular.isString method instead of the default JavaScript implementation (typeof "" === "[object String]"). |
 
 
 # Need your help
