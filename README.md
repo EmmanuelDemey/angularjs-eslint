@@ -14,6 +14,7 @@ This repository will give access to new rules for the ESLint tool. You should us
 | ng_filter_name | All your filters should have a name starting the parameter you can define in your config object ("ng_filter_name":  [2, "ng"]) |
 | ng_on_watch | Watch and On methods on the scope object should be assigned to a variable, in order to be deleted in a $destroy event handler |
 | ng_service_name | All your services should have a name starting the parameter you can define in your config object ("ng_service_name":  [2, "ng"]) |
+| ng_timeout_service | Instead of the default setTimeout function, you should use the AngularJS wrapper service $timeout |
 | ng_typecheck_array | You should use the angular.isArray method instead of the default JavaScript implementation (typeof [] === "[object Array]").  |
 | ng_typecheck_boolean | You should use the angular.isBoolean method instead of the default JavaScript implementation (typeof true === "[object Boolean]").  |
 | ng_typecheck_date | You should use the angular.isDate method instead of the default JavaScript implementation (typeof new Date() === "[object Date]").  |
@@ -22,7 +23,7 @@ This repository will give access to new rules for the ESLint tool. You should us
 | ng_typecheck_object | You should use the angular.isObject method instead of the default JavaScript implementation (typeof {} === "[object Object]").  |
 | ng_typecheck_regexp | You should use the angular.isRegexp method instead of the default JavaScript implementation (toString.call(/^A/) === "[object RegExp]"). |
 | ng_typecheck_string | You should use the angular.isString method instead of the default JavaScript implementation (typeof "" === "[object String]"). |
-
+| ng_window_service | Instead of the default window object, you should prefer the AngularJS wrapper service $window. |
 
 # Need your help
 It is an opensource project. Any help will be very useful. You can : 
