@@ -10,7 +10,7 @@ var eslint = require('../node_modules/eslint/lib/eslint'),
 //------------------------------------------------------------------------------
 
 var eslintTester = new ESLintTester(eslint);
-eslintTester.addRuleTest('rules/ng_window_service', {
+eslintTester.addRuleTest('rules/ng_timeout_service', {
     valid: [
         '$timeout(function(){})',
         '$timeout(function(){}, 1000)',
