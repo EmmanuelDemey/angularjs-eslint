@@ -1,3 +1,7 @@
+THIS REPOSITORY IS DEPRECATED ! 
+In order to be compliant with the ESLint's Plugin API, a [new repository](https://github.com/Gillespie59/eslint-plugin-angularjs) has been created ! 
+
+
 [![Build Status](https://travis-ci.org/Gillespie59/angularjs-eslint.svg?branch=master)](https://travis-ci.org/Gillespie59/angularjs-eslint)
 [![Npm dependencies](https://david-dm.org/Gillespie59/angularjs-eslint.svg)](https://david-dm.org/Gillespie59/angularjs-eslint)
 [![devDependency Status](https://david-dm.org/Gillespie59/angularjs-eslint/dev-status.png)](https://david-dm.org/Gillespie59/angularjs-eslint#info=devDependencies)
