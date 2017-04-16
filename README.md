@@ -7,7 +7,7 @@ In order to be compliant with the ESLint's Plugin API, a [new repository](https:
 [![devDependency Status](https://david-dm.org/Gillespie59/angularjs-eslint/dev-status.png)](https://david-dm.org/Gillespie59/angularjs-eslint#info=devDependencies)
 
 
-This repository will give access to new rules for the ESLint tool. You should use it only if you are developping an AngularJS application. 
+This repository will give access to new rules for the ESLint tool. You should use it only if you are developing an AngularJS application. 
 
 # Rules
 
